@@ -1,0 +1,102 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.add-btn,
+.delete-btn,
+.edit-btn {
+  margin: 10px auto;
+  border: 1px solid;
+  flex: 0 1 20%;
+}
+
+.add-btn {
+  background-color: lightgreen;
+}
+
+.delete-btn {
+  background-color: lightcoral;
+}
+
+.edit-btn {
+  background-color: lightblue;
+}
+
+.data-container {
+  margin: 10px auto;
+}
+
+.employee-table,
+.employee-table th,
+.employee-table td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.employee-table {
+  margin: auto;
+  width: 100%;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 10px ;
+}
+
+.employee-table th {
+  background-color: #ffffcc;
+}
+
+.employee-table td :nth-child(even) {
+  background-color: #f2e6ff;
+}
+
+.close-btn {
+  font-size: 30px;
+  margin-left: 10px;
+  float: left;
+  cursor: pointer;
+}
+
+.add-edit-popup {
+  width: 60%;
+  min-height: 300px;
+  border: 1px solid;
+  position: relative;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.add-edit-title {
+	flex-grow: 1;
+}
+
+.add-edit-inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-label,
+.popup-input {
+	flex: 1 1 40%;
+}
+
+.popup-label {
+  text-align: center;
+  margin: 10px;
+}
+
+.popup-input {
+  margin: 5px 20px 5px 10px;
+  border-radius: 10px;
+}
+
+.error-message {
+  color: red;
+}
