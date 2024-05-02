@@ -30,7 +30,7 @@ function App(): JSX.Element {
 
   // get the list of employees from the api
   // this will wait for a response from the api before setting the employees
-  const fetchEmployees = async () => {
+  const fetchEmployees = async (): Promise<void> => {
     setEmployees(await getEmployees());
   };
 
