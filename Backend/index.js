@@ -1,3 +1,5 @@
+//REF : https://node-postgres.com/features/queries
+
 const express = require('express');
 const app = express();
 const port=8080;
@@ -59,6 +61,7 @@ app.post('/employees/add/', (req,res) => {
 
 // for editing employee information
 app.patch('/employees/edit/:id', (req,res) => {
+  // create the update statement  
   const updateStmt = `UPDATE employees 
                       SET 
                       name = $1, 

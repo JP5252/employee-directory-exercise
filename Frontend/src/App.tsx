@@ -116,10 +116,9 @@ function App(): JSX.Element {
           handleData={handleData}
           handleSumbit={handleSumbit}/>
         <Table
-            employees={employees}
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-          />
+          employees={employees}
+          handleEdit={handleEdit}
+          handleDelete={handleDelete}/>
       </div>
     </>
   );

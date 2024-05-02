@@ -6,8 +6,8 @@ export const getEmployees = async (): Promise<Employee[]> => {
   try {
     const res = await axios.get<Employee[]>('http://localhost:8080/employees');
     return res.data;
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
     return [];
   }
 };
@@ -16,17 +16,17 @@ export const getEmployees = async (): Promise<Employee[]> => {
 export const addEmployee = async (employeeData: Employee): Promise<void> => {
 	try {
 		await axios.post<Employee>('http://localhost:8080/employees/add/', employeeData);
-	} catch (error) {
-	  console.error(error);
+	} catch (err) {
+	  console.error(err);
 	}
-  };
+};
 
 // api call for deleting an employee from the directory
 export const deleteEmployee = async (id: number): Promise<void> => {
   try {
     await axios.delete(`http://localhost:8080/employees/remove/${id}`);
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
   }
 };
 
@@ -34,7 +34,7 @@ export const deleteEmployee = async (id: number): Promise<void> => {
 export const editEmployee = async (employeeData: Employee): Promise<void> => {
 	try {
 	  await axios.patch<Employee>(`http://localhost:8080/employees/edit/${employeeData.id}`, employeeData);
-	} catch (error) {
-	  console.error(error);
+	} catch (err) {
+	  console.error(err);
 	}
-  };
+};
