@@ -36,8 +36,7 @@ const Table: React.FC<TableProps> = ({ employees, handleEdit, handleDelete }) =>
       accessor: 'color',
       Cell: ({ value }: { value: string }) => (
           // this was the only way I could get the color to display in the table
-          // data, I was unable to edit the td explicitly itself like in the
-          // html table.
+          // data, I was unable to edit the td itself like in the html table.
           <div
             className='color-cell'
             style={{height: '50px', width: '50px',backgroundColor: isValidColor(value) ? value : 'white'}}
